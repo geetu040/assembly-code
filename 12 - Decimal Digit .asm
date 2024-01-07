@@ -1,0 +1,19 @@
+		ORG 00H
+
+MOV P1, #213
+MOV R0, #3
+
+MOV R1, #05H
+
+LOOP:
+
+	MOV A, P1
+	MOV B, #10
+	DIV AB
+
+	mov p1, a
+
+	MOV @R1, B
+	INC R1
+	DJNZ R0, LOOP
+END

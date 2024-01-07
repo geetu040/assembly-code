@@ -1,0 +1,13 @@
+	ORG 00H
+
+
+MOV DPTR, #0010H
+
+MOV A, #01H;
+MOVC A, @A+DPTR
+MOV P1, A
+
+
+	ORG 10H
+
+DB 1, 2, 3, 4, 5
